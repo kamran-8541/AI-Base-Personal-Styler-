@@ -1,85 +1,67 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FaRobot, FaUserAlt, FaLightbulb, FaHeart } from "react-icons/fa";
+import { FaHeart } from "react-icons/fa";
+import { Navbar } from "./NavBar";
+import cmo from '../assets/Cmo.jpg'
+import ceo from '../assets/CEO.jpg'
 
 const About = () => {
   return (
-    <div className="relative min-h-screen bg-gradient-to-b from-purple-100 to-pink-50 text-gray-800 overflow-hidden">
-      {/* Background video overlay */}
-      <div className="absolute inset-0 bg-[url('/fashion-bg.jpg')] bg-cover bg-center opacity-10"></div>
-
-      {/* Main content */}
-      <div className="relative z-10 flex flex-col items-center text-center px-6 py-20 space-y-12">
+    <div className="relative min-h-screen bg-white text-gray-900 overflow-hidden">
+      <Navbar />
+      
+      <div className="relative z-10 flex flex-col items-center text-center px-6 py-16 space-y-14">
         <motion.h1
-          className="text-5xl md:text-6xl font-extrabold text-purple-700 drop-shadow-lg"
+          className="text-5xl md:text-6xl font-extrabold text-gray-900 tracking-tight"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          About <span className="text-pink-500">SnapStyle</span>
+          About <span className="font-light">SnapStyle</span>
         </motion.h1>
-
         <motion.p
           className="max-w-3xl text-lg md:text-xl text-gray-700 leading-relaxed"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 0.4, duration: 1 }}
+          transition={{ delay: 0.3, duration: 1 }}
         >
-          SnapStyle is your personal <span className="text-purple-700 font-semibold">AI-powered stylist</span>.
-          We help you discover outfits that match your mood, occasion, and personality —
-          turning fashion into a smart and effortless experience.
+          SnapStyle is your personal{" "}
+          <span className="font-semibold text-gray-900">AI stylist</span>, helping you
+          discover looks that reflect your individuality. We blend technology and
+          design to make fashion intuitive, smart, and effortless.
         </motion.p>
+        <div className="my-team w-full max-w-5xl mt-10">
+          <h2 className="text-3xl font-semibold mb-10 tracking-tight">Our Team</h2>
 
-        {/* Cards Section */}
-        <div className="grid md:grid-cols-3 gap-8 mt-12 px-4">
-          {/* Card 1 */}
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            className="bg-white/80 backdrop-blur-lg p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300"
-          >
-            <FaRobot className="text-5xl text-purple-600 mx-auto mb-4" />
-            <h3 className="text-2xl font-semibold mb-3 text-purple-700">AI-Powered Fashion</h3>
-            <p className="text-gray-700">
-              Our advanced AI analyzes styles and trends to give you personalized outfit recommendations.
-            </p>
-          </motion.div>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-10">
+            <div className="flex flex-col items-center space-y-3">
+            <img src={ceo} className="w-[200px] h-[200px] bg-gray-200 overflow-hidden object-cover rounded-md"></img>
+              <h3 className="text-xl font-semibold">Kamran Alam</h3>
+              <p className="text-gray-600 text-sm tracking-wide uppercase">Chief Executive Officer</p>
+            </div>
 
-          {/* Card 2 */}
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            className="bg-white/80 backdrop-blur-lg p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300"
-          >
-            <FaUserAlt className="text-5xl text-pink-600 mx-auto mb-4" />
-            <h3 className="text-2xl font-semibold mb-3 text-pink-600">Personalized for You</h3>
-            <p className="text-gray-700">
-              Every recommendation is tailored to your preferences, body type, and lifestyle.
-            </p>
-          </motion.div>
-
-          {/* Card 3 */}
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            className="bg-white/80 backdrop-blur-lg p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300"
-          >
-            <FaLightbulb className="text-5xl text-yellow-500 mx-auto mb-4" />
-            <h3 className="text-2xl font-semibold mb-3 text-yellow-600">Smart Styling Ideas</h3>
-            <p className="text-gray-700">
-              From party looks to everyday wear, SnapStyle keeps your wardrobe fresh and inspiring.
-            </p>
-          </motion.div>
+            <div className="flex flex-col items-center space-y-3">
+             <img  className="w-[200px] h-[200px] bg-gray-200 overflow-hidden rounded-md"></img>
+              <h3 className="text-xl font-semibold">Istkhar</h3>
+              <p className="text-gray-600 text-sm tracking-wide uppercase">Chief Technology Officer</p>
+            </div>
+            <div className="flex flex-col items-center space-y-3">
+              <img src={cmo} className="w-[200px] h-[200px] bg-gray-200 overflow-hidden rounded-md"></img>
+              <h3 className="text-xl font-semibold">Mansi Rawat</h3>
+              <p className="text-gray-600 text-sm tracking-wide uppercase">Chief Marketing Officer</p>
+            </div>
+          </div>
         </div>
-
-        {/* Bottom Section */}
         <motion.div
-          className="mt-16 text-lg md:text-xl text-gray-700 max-w-2xl"
+          className="mt-20 text-lg md:text-xl text-gray-700 max-w-2xl leading-relaxed"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.6, duration: 1 }}
+          transition={{ delay: 0.5, duration: 1 }}
         >
-          <FaHeart className="text-3xl text-pink-500 mx-auto mb-4" />
+          <FaHeart className="text-3xl text-gray-800 mx-auto mb-4" />
           <p>
-            We believe fashion is more than just clothing — it’s a way to express yourself.
-            SnapStyle empowers you to look and feel your best, every single day.
+            We believe style is not about trends — it’s about self-expression.
+            SnapStyle exists to simplify, inspire, and empower how you dress.
           </p>
         </motion.div>
       </div>

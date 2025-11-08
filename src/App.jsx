@@ -14,7 +14,7 @@ const App = () => {
         playsInline
         className="absolute mt-[10vh] inset-0 w-full h-full object-cover"
       >
-        <source src="src/V1.mp4" type="video/mp4" />
+        <source src="https://cdn.prod.website-files.com/681afc3d8594bd00b7866ccd%2F681b032c0db34e3762f4fb28_aiuta-transcode.mp4" type="video/mp4" />
       </video>
 
       <div className="relative z-10 flex flex-col min-h-screen">

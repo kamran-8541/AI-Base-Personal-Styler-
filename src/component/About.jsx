@@ -9,7 +9,6 @@ const About = () => {
   return (
     <div className="relative min-h-screen bg-white text-gray-900 overflow-hidden">
       <Navbar />
-      
       <div className="relative z-10 flex flex-col items-center text-center px-6 py-16 space-y-14">
         <motion.h1
           className="text-5xl md:text-6xl font-extrabold text-gray-900 tracking-tight"
